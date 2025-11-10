@@ -1,5 +1,5 @@
 import { ClassicEditor, CloudServices, Essentials, Paragraph, } from 'ckeditor5';
-import { Comments, RealTimeCollaborativeComments, RealTimeCollaborativeEditing, RealTimeCollaborativeRevisionHistory, RealTimeCollaborativeTrackChanges, TrackChanges, RevisionHistory } from 'ckeditor5-premium-features';
+import { Comments, RealTimeCollaborativeComments, RealTimeCollaborativeEditing, RealTimeCollaborativeRevisionHistory, RealTimeCollaborativeTrackChanges, TrackChanges, RevisionHistory, PresenceList } from 'ckeditor5-premium-features';
 import 'ckeditor5/ckeditor5.css';
 import 'ckeditor5-premium-features/ckeditor5-premium-features.css';
 
@@ -9,7 +9,7 @@ import 'ckeditor5-premium-features/ckeditor5-premium-features.css';
 ClassicEditor
     .create(document.querySelector('#editor4') as HTMLElement, {
         licenseKey: import.meta.env.VITE_CKEDITOR_LICENSE_KEY || 'GPL',
-        plugins: [Essentials, Paragraph, Comments, CloudServices, TrackChanges, RevisionHistory, RealTimeCollaborativeComments, RealTimeCollaborativeEditing, RealTimeCollaborativeRevisionHistory, RealTimeCollaborativeTrackChanges,],
+        plugins: [Essentials, Paragraph, Comments, CloudServices, TrackChanges, RevisionHistory, RealTimeCollaborativeComments, RealTimeCollaborativeEditing, RealTimeCollaborativeRevisionHistory, RealTimeCollaborativeTrackChanges, PresenceList],
         toolbar: ['undo', 'redo', 'trackChanges', 'revisionHistory', 'comment', 'commentsArchive'],
         cloudServices: {
             tokenUrl: import.meta.env.VITE_CKEDITOR_CLOUD_SERVICES_TOKEN_URL || '',
@@ -26,4 +26,5 @@ ClassicEditor
             viewerSidebarContainer: document.querySelector('#editor-revision-history-sidebar4') as HTMLElement,
             resumeUnsavedRevision: true
         },
+        presenceList: { container: document.querySelector('#editor-presence4') as HTMLElement },
     })
