@@ -27,9 +27,9 @@ class UsersIntegration extends Plugin {
 class CommentsIntegration extends Plugin { }
 
 ClassicEditor
-  .create(document.querySelector('#editor3') as HTMLElement, {
+  .create(document.querySelector('#editor') as HTMLElement, {
     licenseKey: import.meta.env.VITE_CKEDITOR_LICENSE_KEY || 'GPL',
     plugins: [Essentials, Paragraph, Comments, UsersIntegration],
-    sidebar: { container: document.querySelector('#sidebar3') as HTMLElement },
+    sidebar: { container: document.querySelector('#sidebar') as HTMLElement },
     toolbar: ['undo', 'redo', 'comment', 'commentsArchive'],
   })

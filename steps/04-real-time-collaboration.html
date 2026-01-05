@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Step 4: Real time collaboration</title>
+</head>
+
+<body>
+  <div id="app">
+    <nav>
+      <a href="/steps/03-revision-history.html">Previous: Revision History</a>
+      <a href="/">Back to overview</a>
+    </nav>
+    <h1>Step 4: Real time collaboration</h1>
+    <p>See <code>real-time-collaborations.ts</code> file.</p>
+    <p>Handling all of the synchronization for the tracking changes, revision history as well as comments.</p>
+    <p>Randomly assigning the user.</p>
+    <div class="main-container">
+      <div class="presence" id="editor-presence"></div>
+
+      <div
+        class="editor-container editor-container_classic-editor editor-container_include-outline editor-container_include-annotations editor-container_include-fullscreen"
+        id="editor-container">
+        <div class="editor-container__editor-wrapper">
+          <div class="editor-container__sidebar" id="editor-outline"></div>
+          <div class="editor-container__editor">
+            <div id="editor"></div>
+          </div>
+          <div class="editor-container__sidebar" id="editor-annotations"></div>
+        </div>
+      </div>
+      <div class="revision-history" id="editor-revision-history">
+        <div class="revision-history__wrapper">
+          <div class="revision-history__editor" id="editor-revision-history-editor"></div>
+          <div class="revision-history__sidebar" id="editor-revision-history-sidebar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/real-time-collaborations.ts"></script>
+</body>
+
+</html>

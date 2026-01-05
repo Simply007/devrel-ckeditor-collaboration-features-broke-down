@@ -27,15 +27,15 @@ class UsersIntegration extends Plugin {
 class RevisionHistoryIntegration extends Plugin { }
 
 ClassicEditor
-  .create(document.querySelector('#editor2') as HTMLElement, {
+  .create(document.querySelector('#editor') as HTMLElement, {
     licenseKey: import.meta.env.VITE_CKEDITOR_LICENSE_KEY || 'GPL',
     plugins: [Essentials, Paragraph, UsersIntegration, RevisionHistory],
     toolbar: ['undo', 'redo', 'revisionHistory'],
     revisionHistory: {
-      editorContainer: document.querySelector('#editor-container2') as HTMLElement,
-      viewerContainer: document.querySelector('#editor-revision-history2') as HTMLElement,
-      viewerEditorElement: document.querySelector('#editor-revision-history-editor2') as HTMLElement,
-      viewerSidebarContainer: document.querySelector('#editor-revision-history-sidebar2') as HTMLElement,
+      editorContainer: document.querySelector('#editor-container') as HTMLElement,
+      viewerContainer: document.querySelector('#editor-revision-history') as HTMLElement,
+      viewerEditorElement: document.querySelector('#editor-revision-history-editor') as HTMLElement,
+      viewerSidebarContainer: document.querySelector('#editor-revision-history-sidebar') as HTMLElement,
       resumeUnsavedRevision: true
     },
 

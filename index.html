@@ -5,75 +5,29 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>track-changes</title>
+  <link rel="stylesheet" href="/index.css" />
+  <title>CKEditor 5 - Collaboration Features</title>
 </head>
 
 <body>
   <div id="app">
     <h1>CKEditor 5 - Collaboration features installation steps.</h1>
+    <div class="cards">
     <section>
-      <h2>Step 1: Comments & Mentions Minimal Example</h2>
-      <p>See <code>comments.ts</code> file.</p>
-      <div class="editor-container__editor-wrapper">
-        <div class="editor-container__editor" id="editor3"></div>
-        <div class="editor-container__sidebar" id="sidebar3"> </div>
-      </div>
+      <h2>Step 1: Comments</h2>
+      <p><a href="/steps/01-comments.html">Open example</a></p>
     </section>
     <section>
-      <h2>Step 2: Track Changes Minimal Example</h2>
-      <p>See <code>track-changes.ts</code> file.</p>
-      <div class="editor-container__editor-wrapper">
-        <div class="editor-container__editor" id="editor"></div>
-        <div class="editor-container__sidebar" id="sidebar"> </div>
-      </div>
+      <h2>Step 2: Track Changes</h2>
+      <p><a href="/steps/02-track-changes.html">Open example</a></p>
     </section>
     <section>
-      <h2>Step 3: Revisions History Minimal Example</h2>
-      <p>See <code>revision-history.ts</code> file.</p>
-      <div
-        class="editor-container editor-container_classic-editor editor-container_include-outline editor-container_include-annotations editor-container_include-fullscreen"
-        id="editor-container2">
-        <div class="editor-container__editor-wrapper">
-          <div class="editor-container__sidebar" id="editor-outline2"></div>
-          <div class="editor-container__editor">
-            <div id="editor2"></div>
-          </div>
-          <div class="editor-container__sidebar" id="editor-annotations2"></div>
-        </div>
-      </div>
-      <div class="revision-history" id="editor-revision-history2">
-        <div class="revision-history__wrapper">
-          <div class="revision-history__editor" id="editor-revision-history-editor2"></div>
-          <div class="revision-history__sidebar" id="editor-revision-history-sidebar2"></div>
-        </div>
-      </div>
+      <h2>Step 3: Revision History</h2>
+      <p><a href="/steps/03-revision-history.html">Open example</a></p>
     </section>
     <section>
-      <h2>Step 4: Real time collaboration</h2>
-      <p>See <code>real-time-collaboration.ts</code> file.</p>
-      <p>Handling all of the synchronization for the tracking changes, revision history as well as comments.</p>
-      <p>Randomly assigning the user.</p>
-      <div class="main-container">
-        <div class="presence" id="editor-presence4"></div>
-
-        <div
-          class="editor-container editor-container_classic-editor editor-container_include-outline editor-container_include-annotations editor-container_include-fullscreen"
-          id="editor-container4">
-          <div class="editor-container__editor-wrapper">
-            <div class="editor-container__sidebar" id="editor-outline4"></div>
-            <div class="editor-container__editor">
-              <div id="editor4"></div>
-            </div>
-            <div class="editor-container__sidebar" id="editor-annotations4"></div>
-          </div>
-        </div>
-        <div class="revision-history" id="editor-revision-history4">
-          <div class="revision-history__wrapper">
-            <div class="revision-history__editor" id="editor-revision-history-editor4"></div>
-            <div class="revision-history__sidebar" id="editor-revision-history-sidebar4"></div>
-          </div>
-        </div>
-      </div>
+      <h2>Step 4: Real-Time Collaboration</h2>
+      <p><a href="/steps/04-real-time-collaboration.html">Open example</a></p>
     </section>
     <section>
       <h2>Step 5: Final Integration</h2>
@@ -91,12 +45,8 @@
         </li>
       </ul>
     </section>
+    </div>
   </div>
-  <script type="module" src="/src/comments.ts"></script>
-  <script type="module" src="/src/track-changes.ts"></script>
-  <script type="module" src="/src/revision-history.ts"></script>
-  <script type="module" src="/src/real-time-collaborations.ts"></script>
-
 </body>
 
 </html>
