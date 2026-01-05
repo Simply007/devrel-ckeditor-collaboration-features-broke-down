@@ -1,7 +1,6 @@
 {
-  "name": "track-changes",
-  "private": true,
-  "version": "0.0.0",
+  "name": "devrel-ckeditor-collaboration-features-broke-down",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",

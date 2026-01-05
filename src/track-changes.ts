@@ -20,22 +20,15 @@ class UsersIntegration extends Plugin {
 }
 
 /**
- * The `CommentsIntegration` lets you synchronize comments in the document with your data source (e.g. a database).
- *
- * To read more about it, visit the CKEditor 5 documentation: https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/comments/comments-integration.html.
- */
-class CommentsIntegration extends Plugin {}
-
-/**
  * The `TrackChangesIntegration` lets you synchronize suggestions added to the document with your data source (e.g. a database).
  *
  * To read more about it, visit the CKEditor 5 documentation: https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/track-changes/track-changes-integration.html.
  */
-class TrackChangesIntegration extends Plugin {}
+class TrackChangesIntegration extends Plugin { }
 
 ClassicEditor
   .create(document.querySelector('#editor') as HTMLElement, {
     licenseKey: import.meta.env.VITE_CKEDITOR_LICENSE_KEY || 'GPL',
-    plugins: [Essentials, Paragraph, TrackChanges, Comments, UsersIntegration],
+    plugins: [Essentials, Paragraph, Comments, TrackChanges, UsersIntegration],
     toolbar: ['undo', 'redo', 'trackChanges'],
   })

@@ -3,9 +3,6 @@ import { Comments, RealTimeCollaborativeComments, RealTimeCollaborativeEditing, 
 import 'ckeditor5/ckeditor5.css';
 import 'ckeditor5-premium-features/ckeditor5-premium-features.css';
 
-// based on https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/comments/comments-integration.html
-
-
 ClassicEditor
     .create(document.querySelector('#editor4') as HTMLElement, {
         licenseKey: import.meta.env.VITE_CKEDITOR_LICENSE_KEY || 'GPL',
@@ -16,7 +13,7 @@ ClassicEditor
             webSocketUrl: import.meta.env.VITE_CKEDITOR_CLOUD_SERVICES_WEBSOCKET_URL || ''
         },
         collaboration: {
-            channelId: 'hardcoded-single-document-id'
+            channelId: 'hardcoded-single-channel-id' // see https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/context-and-collaboration-features.html#channel-id
         },
         sidebar: { container: document.querySelector('#sidebar4') as HTMLElement },
         revisionHistory: {
