@@ -9,3 +9,9 @@
   border: 1px solid #ccc;
   padding: 1rem;
 }
+
+.full-width {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-top: 1rem;
+}
