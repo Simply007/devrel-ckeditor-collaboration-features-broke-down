@@ -1,6 +1,11 @@
 # CKEditor 5 Collaboration features iteration showcase
 
-A demonstration project showcasing CKEditor 5's premium collaboration features: track changes, revision history, comments, mentions, and real-time collaboration.
+A bare-bone Typescript demonstration project showcasing CKEditor 5's premium collaboration features in its **minimal setup**:
+
+- [Comments ↗](https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/comments/comments.html)
+- [Track changes ↗](https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/track-changes/track-changes.html)
+- [Revision history ↗](https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/revision-history/revision-history.html)
+- [Real-time collaboration ↗](https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/real-time-collaboration/real-time-collaboration.html)
 
 ![CKEditor 5 Track Changes Showcase](./assets/screenshot.png)
 
@@ -52,10 +57,3 @@ Each example is self-contained in its own TypeScript file under `src/`.
 npm run build    # Build for production
 npm run preview  # Preview production build
 ```
-
-## Resources
-
-- [CKEditor 5 Documentation](https://ckeditor.com/docs/ckeditor5/latest/)
-- [Track Changes Integration Guide](https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/track-changes/track-changes-integration.html)
-- [Revision History Integration Guide](https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/revision-history/revision-history-integration.html)
-- [Comments Integration Guide](https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/comments/comments-integration.html)
