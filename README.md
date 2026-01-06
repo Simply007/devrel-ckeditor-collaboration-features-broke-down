@@ -1,4 +1,4 @@
-# CKEditor 5  Collaboration features iteration showcase
+# CKEditor 5 Collaboration features iteration showcase
 
 A demonstration project showcasing CKEditor 5's premium collaboration features: track changes, revision history, comments, mentions, and real-time collaboration.
 
@@ -23,6 +23,10 @@ A demonstration project showcasing CKEditor 5's premium collaboration features: 
    cp .env.template .env
    ```
 
+   > This project uses CKEditor 5 premium features. A **14-day free trial** is available for evaluation:
+   >
+   > 👉 [Get your free trial license](https://orders.ckeditor.com/trial/premium-features) and fill the keys to `.env` file
+
 3. Start the development server:
 
    ```bash
@@ -41,14 +45,6 @@ This demo includes four separate editor examples, each in its own page under `/f
 - **Real-Time Collaboration** - Live collaborative editing with all features combined
 
 Each example is self-contained in its own TypeScript file under `src/`.
-
-## CKEditor License
-
-This project uses CKEditor 5 premium features. A **14-day free trial** is available for evaluation:
-
-👉 [Get your free trial license](https://orders.ckeditor.com/trial/premium-features)
-
-For the real-time collaboration example, you'll also need to configure cloud services in your `.env` file.
 
 ## Additional Commands
 
