@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-CKEditor 5 demonstration project showcasing premium collaboration features: track changes, revision history, comments, and real-time collaboration. Built with Vite, TypeScript, and runs multiple editor instances on a single page.
+CKEditor 5 demonstration project showcasing premium collaboration features: comments, track changes, revision history, and real-time collaboration. Built with Vite and TypeScript.
 
 ## Development Commands
 
@@ -17,34 +17,29 @@ npm run preview         # Preview production build
 
 ## Architecture
 
-### Multi-Instance Editor Setup
+### Page Structure
 
-The application runs **four separate CKEditor instances** simultaneously on one page (`index.html`), each demonstrating different collaboration features:
-
-1. **Track Changes** (`#editor`, `src/track-changes.ts`): TrackChanges + TrackChangesPreview with sidebar
-2. **Revision History** (`#editor2`, `src/revision-history.ts`): RevisionHistory with outline/annotations sidebars and viewer containers
-3. **Comments** (`#editor3`, `src/comments.ts`): Comments with archive functionality and sidebar
-4. **Real-Time Collaboration** (`#editor4`, `src/real-time-collaborations.ts`): All RealTimeCollaborative* plugins, requires cloud services
-
-Each TypeScript module is loaded via `<script type="module">` tags in index.html.
+- `index.html` - Overview page displaying all features in iframes with cards layout
+- `features/*.html` - Individual feature demo pages:
+  - `comments.html` → `src/comments.ts`
+  - `track-changes.html` → `src/track-changes.ts`
+  - `revision-history.html` → `src/revision-history.ts`
+  - `real-time-collaboration.html` → `src/real-time-collaborations.ts`
 
 ### Integration Plugin Pattern
 
 All examples follow this pattern:
 
-1. **UsersIntegration** plugin: Manages user data (currently hard-coded dummy user "John Doe")
-2. **Empty integration plugins**: CommentsIntegration, TrackChangesIntegration, RevisionHistoryIntegration are placeholder classes for future backend synchronization
-3. **ClassicEditor.create()**: Instantiates editor with specific DOM containers and plugin configuration
+1. **UsersIntegration** plugin: Manages user data (hard-coded dummy user "John Doe")
+2. **Empty integration plugins**: CommentsIntegration, TrackChangesIntegration, RevisionHistoryIntegration are placeholder classes for backend synchronization
+3. **ClassicEditor.create()**: Instantiates editor with DOM containers and plugin configuration
 
-The empty integration classes are intentional extension points for connecting to a backend data source.
+### DOM Element IDs
 
-### Container Element Mapping
-
-Each editor requires specific DOM elements defined in index.html:
-
-- Basic editors need: editor div + sidebar div
-- Revision history needs: container wrapper + editor + outline sidebar + annotations sidebar + separate viewer container with its own editor and sidebar
-- Real-time collaboration uses the same complex structure as revision history
+All feature pages use unified IDs (no numbering):
+- Basic editors: `#editor`, `#sidebar`
+- Revision history/real-time: `#editor-container`, `#editor-outline`, `#editor-annotations`, `#editor-revision-history`, `#editor-revision-history-editor`, `#editor-revision-history-sidebar`
+- Real-time only: `#editor-presence`
 
 ### Environment Variables
 
@@ -53,4 +48,4 @@ Each editor requires specific DOM elements defined in index.html:
 - `VITE_CKEDITOR_CLOUD_SERVICES_TOKEN_URL`: Required only for real-time collaboration
 - `VITE_CKEDITOR_CLOUD_SERVICES_WEBSOCKET_URL`: Required only for real-time collaboration
 
-Real-time collaboration (editor 4) uses hardcoded `channelId: 'hardcoded-single-document-id'` for synchronization.
+Real-time collaboration uses hardcoded `channelId: 'hardcoded-single-channel-id'` for synchronization.

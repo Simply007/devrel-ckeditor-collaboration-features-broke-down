@@ -3,11 +3,8 @@ import { Comments, RealTimeCollaborativeComments, RealTimeCollaborativeEditing, 
 import 'ckeditor5/ckeditor5.css';
 import 'ckeditor5-premium-features/ckeditor5-premium-features.css';
 
-// based on https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/comments/comments-integration.html
-
-
 ClassicEditor
-    .create(document.querySelector('#editor4') as HTMLElement, {
+    .create(document.querySelector('#editor') as HTMLElement, {
         licenseKey: import.meta.env.VITE_CKEDITOR_LICENSE_KEY || 'GPL',
         plugins: [Essentials, Paragraph, Comments, CloudServices, TrackChanges, RevisionHistory, RealTimeCollaborativeComments, RealTimeCollaborativeEditing, RealTimeCollaborativeRevisionHistory, RealTimeCollaborativeTrackChanges, PresenceList],
         toolbar: ['undo', 'redo', 'trackChanges', 'revisionHistory', 'comment', 'commentsArchive'],
@@ -16,15 +13,15 @@ ClassicEditor
             webSocketUrl: import.meta.env.VITE_CKEDITOR_CLOUD_SERVICES_WEBSOCKET_URL || ''
         },
         collaboration: {
-            channelId: 'hardcoded-single-document-id'
+            channelId: 'hardcoded-single-channel-id' // see https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/context-and-collaboration-features.html#channel-id
         },
-        sidebar: { container: document.querySelector('#sidebar4') as HTMLElement },
+        sidebar: { container: document.querySelector('#sidebar') as HTMLElement },
         revisionHistory: {
-            editorContainer: document.querySelector('#editor-container4') as HTMLElement,
-            viewerContainer: document.querySelector('#editor-revision-history4') as HTMLElement,
-            viewerEditorElement: document.querySelector('#editor-revision-history-editor4') as HTMLElement,
-            viewerSidebarContainer: document.querySelector('#editor-revision-history-sidebar4') as HTMLElement,
+            editorContainer: document.querySelector('#editor-container') as HTMLElement,
+            viewerContainer: document.querySelector('#editor-revision-history') as HTMLElement,
+            viewerEditorElement: document.querySelector('#editor-revision-history-editor') as HTMLElement,
+            viewerSidebarContainer: document.querySelector('#editor-revision-history-sidebar') as HTMLElement,
             resumeUnsavedRevision: true
         },
-        presenceList: { container: document.querySelector('#editor-presence4') as HTMLElement },
+        presenceList: { container: document.querySelector('#editor-presence') as HTMLElement },
     })

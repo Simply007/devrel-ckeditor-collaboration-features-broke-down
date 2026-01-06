@@ -33,12 +33,12 @@ A demonstration project showcasing CKEditor 5's premium collaboration features: 
 
 ## What's Included
 
-This demo includes four separate editor examples on a single page:
+This demo includes four separate editor examples, each in its own page under `/features/`:
 
-1. **Track Changes** - Suggestion tracking with accept/reject functionality
-2. **Revision History** - Document version management with side-by-side comparison
-3. **Comments** - Inline commenting and discussion threads
-4. **Real-Time Collaboration** - Live collaborative editing with all features combined
+- **Comments** - Inline commenting and discussion threads
+- **Track Changes** - Suggestion tracking with accept/reject functionality
+- **Revision History** - Document version management with side-by-side comparison
+- **Real-Time Collaboration** - Live collaborative editing with all features combined
 
 Each example is self-contained in its own TypeScript file under `src/`.
 

@@ -5,98 +5,54 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>track-changes</title>
+  <link rel="stylesheet" href="/index.css" />
+  <title>Breaking Down Collaboration Features in CKEditor</title>
 </head>
 
 <body>
   <div id="app">
-    <h1>CKEditor 5 - Collaboration features installation steps.</h1>
-    <section>
-      <h2>Step 1: Track Changes Minimal Example</h2>
-      <p>See <code>track-changes.ts</code> file.</p>
-      <div class="editor-container__editor-wrapper">
-        <div class="editor-container__editor" id="editor"></div>
-        <div class="editor-container__sidebar" id="sidebar"> </div>
-      </div>
-    </section>
-    <section>
-      <h2>Step 2: Revisions History Minimal Example</h2>
-      <p>See <code>revision-history.ts</code> file.</p>
-      <div
-        class="editor-container editor-container_classic-editor editor-container_include-outline editor-container_include-annotations editor-container_include-fullscreen"
-        id="editor-container2">
-        <div class="editor-container__editor-wrapper">
-          <div class="editor-container__sidebar" id="editor-outline2"></div>
-          <div class="editor-container__editor">
-            <div id="editor2"></div>
-          </div>
-          <div class="editor-container__sidebar" id="editor-annotations2"></div>
-        </div>
-      </div>
-      <div class="revision-history" id="editor-revision-history2">
-        <div class="revision-history__wrapper">
-          <div class="revision-history__editor" id="editor-revision-history-editor2"></div>
-          <div class="revision-history__sidebar" id="editor-revision-history-sidebar2"></div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <h2>Step 3: Comments & Mentions Minimal Example</h2>
-      <p>See <code>comments.ts</code> file.</p>
-      <div class="editor-container__editor-wrapper">
-        <div class="editor-container__editor" id="editor3"></div>
-        <div class="editor-container__sidebar" id="sidebar3"> </div>
-      </div>
-    </section>
-    <section>
-      <h2>Step 4: Real time collaborations</h2>
-      <p>See <code>real-time-collaboration.ts</code> file.</p>
-      <p>Handling all of the synchronization for the tracking changes, revision history as well as comments.</p>
-      <p>Randomly assigning the user.</p>
-      <div class="main-container">
-        <div class="presence" id="editor-presence4"></div>
-
-        <div
-          class="editor-container editor-container_classic-editor editor-container_include-outline editor-container_include-annotations editor-container_include-fullscreen"
-          id="editor-container4">
-          <div class="editor-container__editor-wrapper">
-            <div class="editor-container__sidebar" id="editor-outline4"></div>
-            <div class="editor-container__editor">
-              <div id="editor4"></div>
-            </div>
-            <div class="editor-container__sidebar" id="editor-annotations4"></div>
-          </div>
-        </div>
-        <div class="revision-history" id="editor-revision-history4">
-          <div class="revision-history__wrapper">
-            <div class="revision-history__editor" id="editor-revision-history-editor4"></div>
-            <div class="revision-history__sidebar" id="editor-revision-history-sidebar4"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <h2>Step 5: Final Integration</h2>
-      <p>The only thing left is the integration with your storage.</p>
+    <h1>Breaking Down Collaboration Features in CKEditor</h1>
+    <p>Collaboration features in document editing is a family of features, not a single capability. Here we break them
+      down to atomic features so you know exactly what you're getting.</p>
+    <div class="cards">
+      <section>
+        <iframe src="/features/comments.html"></iframe>
+        <p><a href="/features/comments.html">Open example</a></p>
+      </section>
+      <section>
+        <iframe src="/features/track-changes.html"></iframe>
+        <p><a href="/features/track-changes.html">Open example</a></p>
+      </section>
+      <section>
+        <iframe src="/features/revision-history.html"></iframe>
+        <p><a href="/features/revision-history.html">Open example</a></p>
+      </section>
+      <section>
+        <iframe src="/features/real-time-collaboration.html"></iframe>
+        <p><a href="/features/real-time-collaboration.html">Open example</a></p>
+      </section>
+    </div>
+    <section class="full-width">
+      <h2>Combine & Configure</h2>
+      <p>Now you can combine the features. Decide on:</p>
       <ul>
-        <li>
-          See the <a
-            href="https://ckeditor.com/docs/ckeditor5/latest/getting-started/setup/getting-and-setting-data.html"
-            target="_blank" rel="noopener">Getting and setting data guide</a> for details on working with editor data.
-        </li>
-        <li>
-          Alternatively, check out the <a
-            href="https://ckeditor.com/docs/cs/latest/guides/collaboration/document-storage.html" target="_blank"
-            rel="noopener">Document storage guide</a> for collaborative solutions.
+        <li><strong>Collaboration approach</strong>: <a
+            href="https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/collaboration.html#real-time-vs-asynchronous-collaboration"
+            target="_blank" rel="noopener">Asynchronous or Real-Time collaboration</a></li>
+        <li><strong>Visual setup</strong>: <a
+            href="https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/annotations/annotations.html"
+            target="_blank" rel="noopener">Annotation customizations</a></li>
+        <li><strong>Storage target</strong>:
+          <ul>
+            <li><a href="https://ckeditor.com/docs/ckeditor5/latest/getting-started/setup/getting-and-setting-data.html"
+                target="_blank" rel="noopener">Getting and setting data guide</a></li>
+            <li><a href="https://ckeditor.com/docs/cs/latest/guides/collaboration/document-storage.html" target="_blank"
+                rel="noopener">Document storage guide</a></li>
+          </ul>
         </li>
       </ul>
     </section>
   </div>
-  <script type="module" src="/src/track-changes.ts"></script>
-  <script type="module" src="/src/revision-history.ts"></script>
-  <script type="module" src="/src/comments.ts"></script>
-  <script type="module" src="/src/real-time-collaborations.ts"></script>
-
 </body>
 
 </html>
