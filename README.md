@@ -1,4 +1,4 @@
-# CKEditor 5 Collaboration features iteration showcase
+# CKEditor 5 Collaboration features broke down
 
 A bare-bone Typescript demonstration project showcasing CKEditor 5's premium collaboration features in its **minimal setup**:
 
