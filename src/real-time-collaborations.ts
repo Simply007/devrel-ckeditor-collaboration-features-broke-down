@@ -13,7 +13,7 @@ ClassicEditor
             webSocketUrl: import.meta.env.VITE_CKEDITOR_CLOUD_SERVICES_WEBSOCKET_URL || ''
         },
         collaboration: {
-            channelId: 'hardcoded-single-channel-id' // see https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/context-and-collaboration-features.html#channel-id
+            channelId: 'hardcoded-single-document-id' // see https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/context-and-collaboration-features.html#channel-id
         },
         sidebar: { container: document.querySelector('#sidebar') as HTMLElement },
         revisionHistory: {
