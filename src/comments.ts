@@ -12,8 +12,6 @@ class UsersIntegration extends Plugin {
 
   init() {
     const users = this.editor.plugins.get('Users');
-
-    // minimal dummy user
     users.addUser({ id: 'user-1', name: 'John Doe' });
     users.defineMe('user-1');
   }
@@ -30,6 +28,8 @@ ClassicEditor
   .create(document.querySelector('#editor') as HTMLElement, {
     licenseKey: import.meta.env.VITE_CKEDITOR_LICENSE_KEY || 'GPL',
     plugins: [Essentials, Paragraph, Comments, UsersIntegration],
-    sidebar: { container: document.querySelector('#sidebar') as HTMLElement },
     toolbar: ['undo', 'redo', 'comment', 'commentsArchive'],
+    sidebar: {
+      container: document.querySelector('#sidebar') as HTMLElement
+    },
   })
