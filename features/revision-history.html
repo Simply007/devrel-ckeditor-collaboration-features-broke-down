@@ -12,21 +12,17 @@
   <div id="app">
     <h1>Feature: Revision History</h1>
     <p>See <code>~/src/revision-history.ts</code> file.</p>
-    <div
-      class="editor-container editor-container_classic-editor editor-container_include-outline editor-container_include-annotations editor-container_include-fullscreen"
-      id="editor-container">
-      <div class="editor-container__editor-wrapper">
-        <div class="editor-container__sidebar" id="editor-outline"></div>
-        <div class="editor-container__editor">
+    <div class="editor-container" id="editor-container">
+      <div class="editor-container-wrapper">
+        <div class="editor-container-editor">
           <div id="editor"></div>
         </div>
-        <div class="editor-container__sidebar" id="editor-annotations"></div>
       </div>
     </div>
-    <div class="revision-history" id="editor-revision-history">
-      <div class="revision-history__wrapper">
-        <div class="revision-history__editor" id="editor-revision-history-editor"></div>
-        <div class="revision-history__sidebar" id="editor-revision-history-sidebar"></div>
+    <div class="revision-history-container" id="revision-history">
+      <div class="revision-history-wrapper">
+        <div class="revision-history-editor" id="revision-history-editor"></div>
+        <div class="revision-history-sidebar" id="revision-history-sidebar"></div>
       </div>
     </div>
   </div>

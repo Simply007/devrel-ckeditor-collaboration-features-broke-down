@@ -1,7 +1,9 @@
 import { ClassicEditor, Essentials, Paragraph, Plugin } from 'ckeditor5';
-import { Comments, RevisionHistory, TrackChanges } from 'ckeditor5-premium-features';
+import { RevisionHistory } from 'ckeditor5-premium-features';
 import 'ckeditor5/ckeditor5.css';
 import 'ckeditor5-premium-features/ckeditor5-premium-features.css';
+
+import './editor.css'
 
 // Based on https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/revision-history/revision-history-integration.html
 
@@ -28,14 +30,14 @@ class RevisionHistoryIntegration extends Plugin { }
 
 ClassicEditor
   .create(document.querySelector('#editor') as HTMLElement, {
-    licenseKey: import.meta.env.VITE_CKEDITOR_LICENSE_KEY || 'GPL',
+    licenseKey: import.meta.env.VITE_CKEDITOR_LICENSE_KEY,
     plugins: [Essentials, Paragraph, UsersIntegration, RevisionHistory],
     toolbar: ['undo', 'redo', 'revisionHistory'],
     revisionHistory: {
       editorContainer: document.querySelector('#editor-container') as HTMLElement,
-      viewerContainer: document.querySelector('#editor-revision-history') as HTMLElement,
-      viewerEditorElement: document.querySelector('#editor-revision-history-editor') as HTMLElement,
-      viewerSidebarContainer: document.querySelector('#editor-revision-history-sidebar') as HTMLElement,
+      viewerContainer: document.querySelector('#revision-history') as HTMLElement,
+      viewerEditorElement: document.querySelector('#revision-history-editor') as HTMLElement,
+      viewerSidebarContainer: document.querySelector('#revision-history-sidebar') as HTMLElement,
       resumeUnsavedRevision: true
     },
 

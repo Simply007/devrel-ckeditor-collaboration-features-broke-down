@@ -3,6 +3,8 @@ import { Comments, TrackChanges } from 'ckeditor5-premium-features';
 import 'ckeditor5/ckeditor5.css';
 import 'ckeditor5-premium-features/ckeditor5-premium-features.css';
 
+import './editor.css'
+
 // based on https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/track-changes/track-changes-integration.html
 
 class UsersIntegration extends Plugin {
@@ -28,7 +30,10 @@ class TrackChangesIntegration extends Plugin { }
 
 ClassicEditor
   .create(document.querySelector('#editor') as HTMLElement, {
-    licenseKey: import.meta.env.VITE_CKEDITOR_LICENSE_KEY || 'GPL',
+    licenseKey: import.meta.env.VITE_CKEDITOR_LICENSE_KEY,
     plugins: [Essentials, Paragraph, Comments, TrackChanges, UsersIntegration],
     toolbar: ['undo', 'redo', 'trackChanges'],
+    sidebar: {
+      container: document.querySelector('#sidebar') as HTMLElement
+    },
   })

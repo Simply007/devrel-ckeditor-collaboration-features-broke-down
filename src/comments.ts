@@ -3,6 +3,8 @@ import { Comments } from 'ckeditor5-premium-features';
 import 'ckeditor5/ckeditor5.css';
 import 'ckeditor5-premium-features/ckeditor5-premium-features.css';
 
+import './editor.css'
+
 // based on https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/comments/comments-integration.html
 
 class UsersIntegration extends Plugin {
@@ -26,10 +28,11 @@ class CommentsIntegration extends Plugin { }
 
 ClassicEditor
   .create(document.querySelector('#editor') as HTMLElement, {
-    licenseKey: import.meta.env.VITE_CKEDITOR_LICENSE_KEY || 'GPL',
+    licenseKey: import.meta.env.VITE_CKEDITOR_LICENSE_KEY,
     plugins: [Essentials, Paragraph, Comments, UsersIntegration],
     toolbar: ['undo', 'redo', 'comment', 'commentsArchive'],
     sidebar: {
       container: document.querySelector('#sidebar') as HTMLElement
     },
+    placeholder: 'Select text and use toolbar to add comments...',
   })
