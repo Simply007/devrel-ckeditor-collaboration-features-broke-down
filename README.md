@@ -30,7 +30,7 @@ A bare-bone Typescript demonstration project showcasing CKEditor 5's premium col
 
    > This project uses CKEditor 5 premium features. A **14-day free trial** is available for evaluation:
    >
-   > 👉 [Get your free trial license](https://orders.ckeditor.com/trial/premium-features) and fill the keys to `.env` file
+   > 👉 [Get your free trial license](https://portal.ckeditor.com/signup/) and fill the keys to `.env` file
 
 3. Start the development server:
 
