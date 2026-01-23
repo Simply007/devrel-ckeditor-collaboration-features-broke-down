@@ -1,4 +1,4 @@
-# CKEditor 5 Collaboration features broke down
+# CKEditor Collaboration features decomposed
 
 A bare-bone Typescript demonstration project showcasing CKEditor 5's premium collaboration features in its **minimal setup**:
 
