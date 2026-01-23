@@ -1,0 +1,47 @@
+/* Common editor styles */
+
+:root {
+  --ck-sidebar-width: 270px;
+}
+
+.editor-container-wrapper {
+  display: flex;
+}
+
+.editor-container-editor {
+  width: 100%;
+}
+
+.editor-container-wrapper:has(.editor-container-sidebar) .editor-container-editor {
+  width: calc(100% - var(--ck-sidebar-width));
+}
+
+.editor-container-sidebar {
+  width: var(--ck-sidebar-width);
+  margin: 0 0.5em;
+}
+
+/* Presence list styles */
+
+.presence-container {
+  margin-bottom: 0.5em;
+}
+
+/* Revision history viewer styles */
+
+.revision-history-container {
+  display: none;
+}
+
+.revision-history-wrapper {
+  display: flex;
+}
+
+.revision-history-editor {
+  width: calc(100% - var(--ck-sidebar-width));
+}
+
+.revision-history-sidebar {
+  width: var(--ck-sidebar-width);
+  margin: 0 0.5em;
+}

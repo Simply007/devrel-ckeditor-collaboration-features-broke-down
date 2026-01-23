@@ -5,23 +5,24 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Feature: Comments</title>
+  <title>Feature: Real-time collaborative editing</title>
 </head>
 
 <body>
   <div id="app">
-    <h1>Feature: Comments</h1>
-    <p>See <code>~/src/comments.ts</code> file.</p>
+    <h1>Feature: Real-time collaborative editing</h1>
+    <p>See <code>~/src/real-time-collaborative-editing.ts</code> file.</p>
+    <p><em>Requires CloudServices.</em></p>
+    <div class="presence-container" id="presence"></div>
     <div class="editor-container">
       <div class="editor-container-wrapper">
         <div class="editor-container-editor">
           <div id="editor"></div>
         </div>
-        <div class="editor-container-sidebar" id="sidebar"></div>
       </div>
     </div>
   </div>
-  <script type="module" src="/src/comments.ts"></script>
+  <script type="module" src="/src/real-time-collaborative-editing.ts"></script>
 </body>
 
 </html>

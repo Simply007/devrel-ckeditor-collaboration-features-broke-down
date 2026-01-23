@@ -5,19 +5,20 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Feature: Revision History</title>
+  <title>Combination: Real time collaboration features</title>
 </head>
 
 <body>
   <div id="app">
-    <h1>Feature: Revision History</h1>
-    <p>See <code>~/src/revision-history.ts</code> file.</p>
-    <p>Open revision history to see the predefined versions.</p>
+    <h1>Combination: Real time collaboration features</h1>
+    <p>See <code>~/src/real-time-all.ts</code> file.</p>
+    <div class="presence-container" id="presence"></div>
     <div class="editor-container" id="editor-container">
       <div class="editor-container-wrapper">
         <div class="editor-container-editor">
           <div id="editor"></div>
         </div>
+        <div class="editor-container-sidebar" id="sidebar"></div>
       </div>
     </div>
     <div class="revision-history-container" id="revision-history">
@@ -27,7 +28,7 @@
       </div>
     </div>
   </div>
-  <script type="module" src="/src/revision-history.ts"></script>
+  <script type="module" src="/src/real-time-all.ts"></script>
 </body>
 
 </html>
