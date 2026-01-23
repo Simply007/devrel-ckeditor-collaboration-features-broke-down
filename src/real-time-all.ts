@@ -1,4 +1,4 @@
-import { ClassicEditor, CloudServices, Essentials, Mention, Paragraph, } from 'ckeditor5';
+import { ClassicEditor, CloudServices, Essentials, Paragraph, } from 'ckeditor5';
 import { Comments, RealTimeCollaborativeEditing, RealTimeCollaborativeRevisionHistory, RealTimeCollaborativeTrackChanges, TrackChanges, RevisionHistory, PresenceList, RealTimeCollaborativeComments } from 'ckeditor5-premium-features';
 import 'ckeditor5/ckeditor5.css';
 import 'ckeditor5-premium-features/ckeditor5-premium-features.css';
@@ -10,9 +10,11 @@ ClassicEditor
         licenseKey: import.meta.env.VITE_CKEDITOR_LICENSE_KEY,
         plugins: [
             Essentials, Paragraph,
-            Comments, TrackChanges, RevisionHistory, Mention,
-            CloudServices, RealTimeCollaborativeEditing, PresenceList,
-            RealTimeCollaborativeComments, RealTimeCollaborativeTrackChanges,  RealTimeCollaborativeRevisionHistory
+            Comments, RealTimeCollaborativeComments,
+            TrackChanges, RealTimeCollaborativeTrackChanges,
+            RevisionHistory, RealTimeCollaborativeRevisionHistory,
+            CloudServices, RealTimeCollaborativeEditing,
+            PresenceList,
         ],
         toolbar: ['undo', 'redo', 'trackChanges', 'revisionHistory', 'comment', 'commentsArchive'],
         cloudServices: {

@@ -1,5 +1,5 @@
-import { ClassicEditor, CloudServices, Essentials, Paragraph} from 'ckeditor5';
-import { Comments, PresenceList, RealTimeCollaborativeComments, RealTimeCollaborativeEditing } from 'ckeditor5-premium-features';
+import { ClassicEditor, CloudServices, Essentials, Paragraph } from 'ckeditor5';
+import { PresenceList, RealTimeCollaborativeEditing } from 'ckeditor5-premium-features';
 import 'ckeditor5/ckeditor5.css';
 import 'ckeditor5-premium-features/ckeditor5-premium-features.css';
 
@@ -10,9 +10,9 @@ ClassicEditor
     .create(document.querySelector('#editor') as HTMLElement, {
         licenseKey: import.meta.env.VITE_CKEDITOR_LICENSE_KEY,
         plugins: [
-            Essentials, Paragraph, 
-            CloudServices, Comments, RealTimeCollaborativeEditing, 
-            PresenceList, RealTimeCollaborativeComments
+            Essentials, Paragraph,
+            CloudServices, RealTimeCollaborativeEditing,
+            PresenceList,
         ],
         toolbar: ['undo', 'redo'],
         cloudServices: {
